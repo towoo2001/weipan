@@ -1,0 +1,36 @@
+<extend name="Base/common"/>
+<block name="content">
+    <link rel="stylesheet" href="__CSS__/global.css">
+    <link rel="stylesheet" href="__CSS__/ticket.css">
+    <script id="G--xyscore-load" type="text/javascript" charset="utf-8" async="" src="__JS__/xyscore_main.js"></script>
+
+    <link rel="stylesheet" href="__CSS__/personal_center.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1474888892_755574.css">
+
+    <div class="personal_recharge">
+        <div class="personal_center_d">
+            <i class="iconfont" id="personal_center_d_i"><a href="javascript:history.go(-1)">&#xe600;</a></i>
+            充值记录
+        </div>
+        <ul class="personal_recharge_ul">
+            <li class="personal_recharge_ul_li">编号</li>
+            <li class="personal_recharge_ul_lia">金额</li>
+            <li class="personal_recharge_ul_lia">状态</li>
+            <li class="personal_recharge_ul_lib">充值时间</li>
+        </ul>
+        <ul class="personal_recharge_ula" style="padding-bottom: 50px">
+            <volist name="list" id="vo">
+                <ul class="personal_recharge_ula">
+                    <li class="personal_recharge_ul_li">{$vo.bpid}</li>
+                    <li id="personal_recharge_ul_lic">&yen;{$vo.bpprice}</li>
+                    <li id="personal_recharge_ul_lic">{$vo.remarks}</li>
+                    <li class="personal_recharge_ul_lib">{$vo.bptime|date='Y-m-d H:i:s',###}</li>
+                </ul>
+            </volist>
+        </ul>
+    </div>
+    <script src="__JS__/jquery-2.1.1.min.js"></script>
+    <script src="__JS__/script.js"></script>
+    <script src="__JS__/getJuan.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__JS__/sea.js" async=""></script>
+</block>

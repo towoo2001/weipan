@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <title>西部微盘宝</title>
+
+    <link rel="stylesheet" type="text/css" href="__CSS__/cd.css" />
+    <link rel="stylesheet" type="text/css" href="__CSS__/foot.css" />
+    <script language="javascript" type="text/javascript" src="__JS__/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/cd.js"></script>
+    <script language="javascript" type="text/javascript" src="__JS__/common.js"></script>
+
+    <link rel="stylesheet" href="__CSS__/base.css">
+    <link rel="stylesheet" href="__CSS__/index.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1474888892_755574.css">
+
+
+</head>
+<body>
+<!--顶部开始-->
+<div class="top_div">
+    <div class="cdan_div"><img src="__IMG__/cdan.png" width="35" height="32"/></div>
+    <div id="commonbao" status="1"></div>
+</div>
+<div class="ycdcdDiv">
+    <div class="gbtb"><img src="__IMG__/gbtb.png"/></div>
+    <ul>
+        <li><a href="/index.php/Home/Index/"><span><img src="__IMG__/jygz.png"/></span><span>首页</span></a></li>
+        <li><a href="{:U('User/recharge')}"><span><img src="__IMG__/cz.png"/></span><span>充值</span></a></li>
+        <li><a href="{:U('User/cash')}"><span><img src="__IMG__/tx.png"/></span><span>提现</span></a></li>
+        <li><a href="{:U('Detailed/drevenue')}"><span><img src="__IMG__/szmx.png"/></span><span>收支明细</span></a></li>
+        <li><a href="{:U('User/memberinfo')}"><span><img src="__IMG__/grxx.png"/></span><span>个人中心</span></a></li>
+        <li><a href="{:U('User/img')}"><span><img src="__IMG__/fxhy.png"/></span><span>分享好友</span></a></li>
+        <li><a href="{:U('User/recommend')}"><span><img src="__IMG__/fxhy.png"/></span><span>我的推广</span></a></li>
+        <li><a href="{:U('User/ranking')}"><span><img src="__IMG__/phb.png"/></span><span>排行榜</span></a></li>
+        <li><a href="{:U('User/logout')}"><span><img src="__IMG__/cs.png"/></span><span>退出</span></a></li>
+
+    </ul>
+</div>
+<!--顶部结束-->
+<div class="main">
+    <block name="content"></block>
+
+    <div class="menus clearfix">
+        <ul>
+            <li class="<present name="pagetype"><else />menu-avtive</present>"><a class="<present name="pagetype">home<else />homeF</present>" href="/Home/Index">首页</a></li>
+            <li class='<present name="pagetype">menu-avtive</present> '><a class="<present name="pagetype">walletF<else />wallet</present>" href="{:U('Detailed/dtrading')}">持仓</a></li>
+            <li><a class="player" href="javascript:;">直播</a></li>
+            <li><a class="service" href="javascript:;">客服</a></li>
+        </ul>
+
+    </div>
+
+</div>
+</body>
+</html>

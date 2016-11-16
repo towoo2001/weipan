@@ -1,0 +1,877 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <title>西部微盘宝</title>
+
+    <link rel="stylesheet" type="text/css" href="/Public/Home/css/cd.css" />
+    <link rel="stylesheet" type="text/css" href="/Public/Home/css/foot.css" />
+    <script language="javascript" type="text/javascript" src="/Public/Home/js/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="/Public/Home/js/cd.js"></script>
+    <script language="javascript" type="text/javascript" src="/Public/Home/js/common.js"></script>
+
+    <link rel="stylesheet" href="/Public/Home/css/base.css">
+    <link rel="stylesheet" href="/Public/Home/css/index.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1474888892_755574.css">
+
+
+</head>
+<body>
+<!--顶部开始-->
+<div class="top_div">
+    <div class="cdan_div"><img src="/Public/Home/images/cdan.png" width="35" height="32"/></div>
+    <div id="commonbao" status="1"></div>
+</div>
+<div class="ycdcdDiv">
+    <div class="gbtb"><img src="/Public/Home/images/gbtb.png"/></div>
+    <ul>
+        <li><a href="/index.php/Home/Index/"><span><img src="/Public/Home/images/jygz.png"/></span><span>首页</span></a></li>
+        <li><a href="<?php echo U('User/recharge');?>"><span><img src="/Public/Home/images/cz.png"/></span><span>充值</span></a></li>
+        <li><a href="<?php echo U('User/cash');?>"><span><img src="/Public/Home/images/tx.png"/></span><span>提现</span></a></li>
+        <li><a href="<?php echo U('Detailed/drevenue');?>"><span><img src="/Public/Home/images/szmx.png"/></span><span>收支明细</span></a></li>
+        <li><a href="<?php echo U('User/memberinfo');?>"><span><img src="/Public/Home/images/grxx.png"/></span><span>个人中心</span></a></li>
+        <li><a href="<?php echo U('User/img');?>"><span><img src="/Public/Home/images/fxhy.png"/></span><span>分享好友</span></a></li>
+        <li><a href="<?php echo U('User/recommend');?>"><span><img src="/Public/Home/images/fxhy.png"/></span><span>我的推广</span></a></li>
+        <li><a href="<?php echo U('User/ranking');?>"><span><img src="/Public/Home/images/phb.png"/></span><span>排行榜</span></a></li>
+        <li><a href="<?php echo U('User/logout');?>"><span><img src="/Public/Home/images/cs.png"/></span><span>退出</span></a></li>
+
+    </ul>
+</div>
+<!--顶部结束-->
+<div class="main">
+    
+    <link rel="stylesheet" href="/Public/Home/css/global.css">
+    <link rel="stylesheet" href="/Public/Home/css/index.css">
+    <link rel="stylesheet" href="/Public/Home/css/pwd.css">
+     <script type="text/javascript">
+         console.log(<?php echo json_encode($goods); ?>);
+     </script>
+    <style type="text/css">
+    .top_div{
+          display:block;
+        }
+    </style>
+    <!--个人中心 start-->
+    <div class="account-info" style="height:4em">
+        <div style="width:50%;float:left;line-height:3em;text-align:center">
+            <em style="color:#fff;font-size:1.2em">个人资产：<span class="gold-yuan"><a href="<?php echo U('User/memberinfo');?>"><span id="usprice"><?php if($user["price"] != 0): echo ($user["price"]); else: ?>0.0<?php endif; ?></span></a></span></em>
+        </div>
+        <div style="width:25%;float:left;line-height:3em;text-align:center">
+            <em style="color:#fff;font-size:1.2em">交易券 ：<span><a style="color:#F1DD00" href="<?php echo U('User/experiencelist');?>"><?php if($user["exper"] != 0): echo ($user["exper"]); else: ?>0<?php endif; ?></a></span>&nbsp;张</em>
+        </div>
+        <div class="account-info-buy">
+            <a href="<?php echo U('News/news');?>" style="background: #FBA903; margin-right: 5%;">公告</a>
+            <a href="<?php echo U('User/recharge');?>" style="background: #E54545">充值</a>
+        </div>
+    </div>
+    <!--个人中心 end-->
+    <div class="wrap" style="overflow:scroll;overflow-x:hidden;">
+        <div class="index" style="height: auto;">
+            <input type="hidden" id="tpqh" value="1">
+            <input type="hidden" id="rate1" value="<?php echo ($rate["0"]["rate"]); ?>">
+            <input type="hidden" id="rate2" value="<?php echo ($rate["1"]["rate"]); ?>">
+            <input type="hidden" id="rate3" value="<?php echo ($rate["2"]["rate"]); ?>">
+            <input type="hidden" id="price1" value="">
+            <input type="hidden" id="price2" value="">
+            <input type="hidden" id="price3" value="">
+            <!-- 账户有建仓订单时显示所有没有平仓的订单 -->
+            <div class="b-line noclearfix" style="margin-bottom:0;display:none" id="useror">
+                <table width="100%" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="15%" style="font-size:1.2em">价格盈亏</td>
+                        <td width="15%" style="font-size:1.2em">建仓价</td>
+                        <td width="24%" style="font-size:1.2em">产品</td>
+                        <td width="11%" style="font-size:1.2em">方向</td>
+                        <td width="0%" style="display:none"></td>
+                        <td width="25%" style="font-size:1.2em">操作</td>
+                    </tr>
+                    <?php if(is_array($nolist)): $i = 0; $__LIST__ = $nolist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$on): $mod = ($i % 2 );++$i;?><!-- 油 -->
+                        <?php if($on["cid"] == 1): ?><tr class="ykzf openpay">
+                                <td class="Profit1" style="font-size:1.2em">--</td>
+                                <td class="ykzfwave" style="display:none"><?php echo ($on["wave"]); ?></td>
+                                <td class="ykzfostyle" style="display:none"><?php echo ($on["ostyle"]); ?></td>
+                                <td class="ykzfeid" style="display:none"><?php echo ($on["eid"]); ?></td>
+                                <td class="ptitle" style="display:none"><?php echo ($on["ptitle"]); ?></td>
+                                <td class="uprice" style="display:none"><?php echo ($on["uprice"]); ?></td>
+                                <td class="oid" style="display:none"><?php echo ($on["oid"]); ?></td>
+                                <td style="display:none" class="yincangyoujia latest-price"></td>
+                                <td class="buyprice" style="font-size:1.2em"><?php echo ($on["buyprice"]); ?></td>
+                                <input type="hidden" id="Profit11" value="<?php echo ($on["buyprice"]); ?>">
+                                <td style="font-size:1.1em"><?php echo ($on["ptitle"]); ?></td>
+                                <td>
+                                    <?php if($on["ostyle"] == 1): ?><font style="font-size:1.2em" color="#2fb44e">跌</font>
+                                        <?php else: ?>
+                                        <font style="font-size:1.2em" color="#ed0000">涨</font><?php endif; ?>
+                                </td>
+                                <td class="onumber" style="width:0px;display:none"><?php echo ($on["onumber"]); ?></td>
+                                <td class="endprofit" style="width:0px;display:none"><?php echo ($on["endprofit"]); ?></td>
+                                <td class="endloss" style="width:0px;display:none"><?php echo ($on["endloss"]); ?></td>
+                                <td class="mypwd-btn chr">
+                                    <a href="<?php echo U('Detailed/orderid');?>?orderid=<?php echo ($on["oid"]); ?>" class="red hide1" data-cid='<?php echo ($on["cid"]); ?>' data-oid='<?php echo ($on["oid"]); ?>'>平仓</a>
+                                    <a href="javascript:void(0);" class="blue hide1" data-onumber='<?php echo ($on["onumber"]); ?>' data-oid='<?php echo ($on["oid"]); ?>' data-zy='<?php echo ($on["endprofit"]); ?>' data-zk='<?php echo ($on["endloss"]); ?>'>设置</a>
+                                    <div style="clear: both;"></div>
+                                </td>
+                            </tr><?php endif; ?>
+                        <!-- 银-->
+                        <?php if($on["cid"] == 2): ?><tr class="ykzf1 openpay">
+                                <td class="Profit2" style="font-size:1.5em">--</td>
+                                <td class="ykzfwave" style="display:none"><?php echo ($on["wave"]); ?></td>
+                                <td class="ykzfostyle" style="display:none"><?php echo ($on["ostyle"]); ?></td>
+                                <td class="ykzfeid" style="display:none"><?php echo ($on["eid"]); ?></td>
+                                <td class="ptitle" style="display:none"><?php echo ($on["ptitle"]); ?></td>
+                                <td class="uprice" style="display:none"><?php echo ($on["uprice"]); ?></td>
+                                <td class="oid" style="display:none"><?php echo ($on["oid"]); ?></td>
+                                <td style="display:none" class="ycbaiyinjia latest-price"></td>
+                                <td class="buyprice2" style="font-size:1.5em"><?php echo ($on["buyprice"]); ?></td>
+                                <input type="hidden" id="Profit22" value="<?php echo ($on["buyprice"]); ?>">
+                                <td style="font-size:1.1em"><?php echo ($on["ptitle"]); ?></td>
+                                <td>
+                                    <?php if($on["ostyle"] == 1): ?><font style="font-size:1.5em" color="#2fb44e">跌</font>
+                                        <?php else: ?>
+                                        <font style="font-size:1.5em" color="#ed0000">涨</font><?php endif; ?>
+                                </td>
+                                <td class="onumber" style="display:none"><?php echo ($on["onumber"]); ?></td>
+                                <td class="endprofit" style="width:0px;display:none"><?php echo ($on["endprofit"]); ?></td>
+                                <td class="endloss" style="width:0px;display:none"><?php echo ($on["endloss"]); ?></td>
+                                <td class="mypwd-btn chr">
+                                    <a href="<?php echo U('Detailed/orderid');?>?orderid=<?php echo ($on["oid"]); ?>" class="red hide1" data-cid='<?php echo ($on["cid"]); ?>' data-oid='<?php echo ($on["oid"]); ?>'>平仓</a>
+                                    <a href="javascript:void(0);" class="blue hide1" data-onumber='<?php echo ($on["onumber"]); ?>' data-oid='<?php echo ($on["oid"]); ?>' data-zy='<?php echo ($on["endprofit"]); ?>' data-zk='<?php echo ($on["endloss"]); ?>'>设置</a>
+                                    <div style="clear: both;"></div>
+                                </td>
+                            </tr><?php endif; ?>
+                        <?php if($on["cid"] == 3): ?><tr class="ykzf2 openpay">
+                                <td class="Profit3" style="font-size:1.5em">--</td>
+                                <td class="ykzfwave" style="display:none"><?php echo ($on["wave"]); ?></td>
+                                <td class="ykzfostyle" style="display:none"><?php echo ($on["ostyle"]); ?></td>
+                                <td class="ykzfeid" style="display:none"><?php echo ($on["eid"]); ?></td>
+                                <td class="ptitle" style="display:none"><?php echo ($on["ptitle"]); ?></td>
+                                <td class="uprice" style="display:none"><?php echo ($on["uprice"]); ?></td>
+                                <td class="oid" style="display:none"><?php echo ($on["oid"]); ?></td>
+                                <td style="display:none" class="ycliqing latest-price"></td>
+                                <td class="buyprice3" style="font-size:1.5em"><?php echo ($on["buyprice"]); ?></td>
+                                <input type="hidden" id="Profit33" value="<?php echo ($on["buyprice"]); ?>">
+                                <td style="font-size:1.1em"><?php echo ($on["ptitle"]); ?></td>
+                                <td>
+                                    <?php if($on["ostyle"] == 3): ?><font style="font-size:1.5em" color="#2fb44e">跌</font>
+                                        <?php else: ?>
+                                        <font style="font-size:1.5em" color="#ed0000">涨</font><?php endif; ?>
+                                </td>
+                                <td class="onumber" style="display:none"><?php echo ($on["onumber"]); ?></td>
+                                <td class="endprofit" style="width:0px;display:none"><?php echo ($on["endprofit"]); ?></td>
+                                <td class="endloss" style="width:0px;display:none"><?php echo ($on["endloss"]); ?></td>
+                                <td class="mypwd-btn chr">
+                                    <a href="<?php echo U('Detailed/orderid');?>?orderid=<?php echo ($on["oid"]); ?>" class="red hide1" data-cid='<?php echo ($on["cid"]); ?>' data-oid='<?php echo ($on["oid"]); ?>'>平仓</a>
+                                    <a href="javascript:void(0);" class="blue hide1" data-onumber='<?php echo ($on["onumber"]); ?>' data-oid='<?php echo ($on["oid"]); ?>' data-zy='<?php echo ($on["endprofit"]); ?>' data-zk='<?php echo ($on["endloss"]); ?>'>设置</a>
+                                    <div style="clear: both;"></div>
+                                </td>
+                            </tr><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                </table>
+            </div>
+            </empty>
+            <div class="index-tag">
+                <div class="tag">
+                    <ul class="tag-tit clearfix">
+                        <li>西部铜</li>
+						<li>西部银</li>
+                        <li>西部沥青</li>
+                    </ul>
+                    <ul class="clearfix">
+                        <li class="sum-arrows-up"><span id="baiyinjia"></span><img src="/Public/Home/images/arrows-up.jpg" id="one"><img src="/Public/Home/images/arrows-down.jpg" id="two"></li>
+                        <li class="sum-arrows-up"><span id='tongjia'></span><img src="/Public/Home/images/arrows-up.jpg" id="three"><img src="/Public/Home/images/arrows-down.jpg" id="four"></li>
+                        <li class="sum-arrows-up"><span id='liqing'></span><img src="/Public/Home/images/arrows-up.jpg" id="five"><img src="/Public/Home/images/arrows-down.jpg" id="six"></li>
+                    </ul>
+                </div>
+                <p class="tag-line"></p>
+            </div>
+            <div style="width:100%;">
+                <div class="switch-product">
+                    <p class="product-box-tag fl" style="background: url(/Public/Home/images/trend-img.jpg) 5% 44% no-repeat; background-size: 1.5em;">行情走势</p>
+                    <ul class="product-box-nav fl clearfix">
+                        <li class="sw_active" value="1"><a>西部铜</a> </li>
+                        <li value="2"> <a>西部银</a> </li>
+                        <li value="3"> <a>西部沥青</a> </li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <div class="info-d">
+                        <div class="trend-box">
+                            <div class="trend-chart" style="cursor: default;">
+                            </div>
+                        </div>
+                        <ul class="trend-nav clearfix TimeMenu">
+                            <li><a href="javascript:void(0)" data-interval='1' data-type="area" class="cur changed">分时图</a></li>
+                            <li><a href="javascript:void(0)" data-interval='5' data-type="candlestick">5分钟</a></li>
+                            <li><a href="javascript:void(0)" data-interval='30' data-type="candlestick">30分钟</a></li>
+                            <li><a href="javascript:void(0)" data-interval='1h' data-type="candlestick">1小时</a></li>
+                            <li><a href="javascript:void(0)" data-interval='1d' data-type="candlestick">日线</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="product-box-all">
+                    <div class="product-box" value="1">
+                        <!--***黄金***-->
+                        <div class="trade-box">
+                            <div class="clearfix pbaiyin">
+                                <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["cid"] == 1): ?><div class="prtv">
+                                            <div class="prtv_info" style="text-align:center">
+                                                <input type="hidden" value="<?php echo ($vo["pid"]); ?>">
+                                                <h4><span class="vouprice"><?php echo ($vo["uprice"]); ?></span>元/手</h4>
+                                                <h3><?php echo ($vo["ptitle"]); ?></h3>
+                                                <h5>波动盈亏：<?php echo ($vo["wave"]); ?>元</h5>
+                                                <h5 style="display:none"><?php echo ($vo["feeprice"]); ?></h5>
+                                            </div>
+                                        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-box silver_con" value="2">
+                        <!---白银-->
+                        <div class="trade-box">
+                            <div class="clearfix ptong">
+                                <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["cid"] == 2): ?><div class="prtv">
+                                            <div class="prtv_info" style="text-align:center">
+                                                <input type="hidden" value="<?php echo ($vo["pid"]); ?>">
+                                                <h4><span class="vouprice"><?php echo ($vo["uprice"]); ?></span>元/手</h4>
+                                                <h3><?php echo ($vo["ptitle"]); ?></h3>
+                                                <h5>波动盈亏：<?php echo ($vo["wave"]); ?>元</h5>
+                                                <h5 style="display:none"><?php echo ($vo["feeprice"]); ?></h5>
+                                            </div>
+                                        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="product-box liqing_con" value="3">
+                        <!---沥青-->
+                        <div class="trade-box">
+                            <div class="clearfix pliqing">
+                                <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; if($vo["cid"] == 3): ?><div class="prtv" style='    width: 21%;margin-left: 3.5%;'>
+                                            <div class="prtv_info" style="text-align:center">
+                                                <input type="hidden" value="<?php echo ($vo["pid"]); ?>">
+                                                <h4 style='font-size:1.1em'><span class="vouprice"><?php echo ($vo["uprice"]); ?></span>元/手</h4>
+                                                <h3 style='font-size:1.1em'><?php echo ($vo["ptitle"]); ?></h3>
+                                                <h5 style='font-size:1.1em'>波动：<?php echo ($vo["wave"]); ?>元</h5>
+                                                <h5 style="display:none"><?php echo ($vo["feeprice"]); ?></h5>
+                                            </div>
+                                        </div><?php endif; endforeach; endif; else: echo "" ;endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+               
+                <p class="buy-btn clearfix">
+                    <span class="buy-btn-buy" onclick="maymoney(this)" adv="买涨">做多</span>
+                    <span class="buy-btn-sale" onclick="maymoney(this)" adv="买跌">做空</span>
+                </p>
+            </div>
+            <!--描述：购买弹窗-->
+            <div class="box">
+                <div id="dialogBg"></div>
+                <div id="dialog" class="">
+                    <div class="dialogTop">
+                        <a href="javascript:;" class="claseDialogBtn" id="claseDialogBtn">关闭</a>
+                    </div>
+                    <!--建仓确认-->
+                    <div class="pop-box none" id="buildBox" style="display: block;top:5rem;margin-top:35px;">
+                        <nav class="pop-nav ">
+                            <a href="javascript:;" class="back" id="claseDialogBtn"></a>
+                            <h3>确认购买</h3>
+                        </nav>
+                        <form id="jcForm" class="build-form" method="post">
+                            <!-- action="<?php echo U('Detailed/addorder');?>" -->
+                            <div class="b-line clearfix">
+                                <label class="b-label">选择数量：</label>
+                                <p class="num-list   clearfix" id="jcsh"> <span class="num-left"></span>
+                                    <input type="text" value="1" class="num-in" id="sls" disabled="">
+                                    <span class="num-right"></span> </p>
+                                <p class="price clearfix"> <span>方向：</span> <em class="fx"><span id="zhd" style="font-size:1.1em"></span></em>
+                                </p>
+                            </div>
+                            <div class="b-line clearfix">
+                                <label class="b-label">品种：</label>
+                                <div class="type-choose clearfix">
+                                    <!--   <a class="t-left"  onclick="zyclick('z')">加</a>  -->
+                                    <div class="type-list clearfix">
+                                        <ul class="p-baiyin" style="margin-top: 0px;">
+                                            <li id="opname" class="xz6" data-l="2" data-bz="200" data-pid="6" data-sxf="30.0" data-juan="0"></li>
+                                        </ul>
+                                    </div>
+                                    <!--   <a class="t-right" onclick="zyclick('you')">减</a>  --></div>
+                                <p class="price clearfix"> <span>当前价格：</span>
+                                    <em class="c-13" style="color:#333"></em>
+                                </p>
+                            </div>
+                            <div class="b-line clearfix" style="display:none">
+                                <p class="c-c-l clearfix">
+                                    <input type="checkbox" id="choose" value="">
+                                    <label for="choose" id="mychoose"></label>
+                                </p>
+                                <em class="c-c-i">使用&nbsp;<img src="/Public/Home/images/ticket-small.png">&nbsp;<i class="c11" id="c11">200</i>元体验劵(<span style="font-size:0.8em">一次只能使用一张</span>)</em> </div>
+                            <div class="b-line clearfix" style="display:none">
+                                <label class="b-label"></label>
+                                <p class="num-list clearfix" id="yingjia">
+                                    <input type="text" value="1" class="num-in" style="margin-left:30px" readonly="">
+                                </p>
+                                <input type="hidden" name="juansl" value="0" id="juansl">
+                                <p class="b-info">剩&nbsp;<span class="big" id="big">0</span>&nbsp;张</p>
+                            </div>
+                            <div class="b-line clearfix">
+                                <label class="b-label">所用费用：</label>
+                                <p class="pay"><span id="opprice">0</span>元</p>
+                                <input type="hidden" name="sxf" id="sxf" value="30.0">
+                                <p class="b-info">手续费&nbsp;<span id="j-5">0</span>&nbsp;元&nbsp;<img src="/Public/Home/images/qrgm.png" style="height:20px" id="shuoming"></p>
+                            </div>
+                            <!--<div class="b-line clearfix">
+                                <label class="b-label">交易密码：</label>
+                                <input type="password" name="jiyaoyimima" id="jiyaoyimima"  placeholder="请输入交易密码" style="width:32%;height:33px;display: inline-block;float:left;border: 1px solid #dedede;background: #fff;font-size: 1.1rem;line-height: 33px;">
+                                <p class="b-info"><a href="<?php echo U('user/edituser');?>">设置密码</a></p>
+                            </div>-->
+                            <div class="b-profit clearfix">
+                                <p class="b-p-t">止盈</p>
+                                <ul class="toclearfix">
+                                    <li value="0">不设</li>
+                                    <li value="10">10%</li>
+                                    <li value="20">20%</li>
+                                    <li value="30">30%</li>
+                                    <li value="40">40%</li>
+                                    <li value="50">50%</li>
+                                </ul>
+                                <p class="b-p-t">止损</p>
+                                <ul class="myclearfix">
+                                    <li value="0">不设</li>
+                                    <li value="10">10%</li>
+                                    <li value="20">20%</li>
+                                    <li value="30">30%</li>
+                                    <li value="40">40%</li>
+                                    <li value="50">50%</li>
+                                </ul>
+                            </div>
+
+                            <input type="hidden" name="type" value="" id="type">
+                            <input type="hidden" name="bz" value="2" id="bz">
+                            <input type="hidden" name="sl" value="1" id="sl">
+                            <input type="hidden" name="zy" value="" id="zy">
+                            <input type="hidden" name="zk" value="" id="zk">
+                            <input type="hidden" name="ordernumber" value="">
+                            <input type="hidden" name="product" value="6" id="product">
+                            <input type="hidden" name="jine" value="<?php echo ($user["price"]); ?>" id="jine">
+                            <input type="hidden" name="isJuan" value="" id="isJuan">
+                            <input type="hidden" name="dqcid" value="" id="dqcid">
+                            <span style="display:none;color:red;font-size:0.7em;text-align:center" id="numss"></span>
+                            <input type="hidden" class="pwd-btn  conform" id="conform1" value="确 认">
+                            <!--余额不足，去充值-->
+                            <a href="<?php echo U('User/recharge');?>" class="pwd-btn chr failure  none" id="conform2">余额不足，去充值</a>
+                            <!--a href="<?php echo U('Index/index');?>" class="pwd-btn chr failure  none" style="display: none;" id="conform3">此商品已购买</a-->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--购买弹窗结束-->
+        </div>
+        <!--遮罩层-->
+    </div>
+    <!--弹窗开始-->
+    <link rel="stylesheet" href="/Public/Home/css/common.css" />
+    <script src="/Public/Home/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    var w, h, className;
+    var a;
+    function getSrceenWH() {
+        w = $(window).width();
+        h = $(window).height();
+        $('#dialogBg').width(w).height(h);
+        $('#dialogBg2').width(w).height(h);
+        $('#dialogBg3').width(w).height(h);
+    }
+    window.onresize = function() {
+        getSrceenWH();
+    }
+    $(window).resize();
+    $(function() {
+        getSrceenWH();
+        //关闭弹窗
+        $('#claseDialogBtn').click(function() {
+            $('#dialogBg').fadeOut(200, function() {
+                $('#dialog').addClass('bounceOutUp').fadeOut(200);
+            });
+        });
+    });
+    //建仓
+    function maymoney(obj) {
+        var ubalance = $('#usprice').html(); //获取可用余额
+        but = $(obj).attr('adv'); //获取选择是涨还是跌的值
+        $('#zhd').html(but);
+        var j = $(".sw_active").attr('value');
+        if (j == 2) {
+            var c = $(".ptong").find(".proqie");
+            var pid = $(c).children().children().eq(0).attr('value'); //获取项目ID
+            $('#type').val(pid);
+            var vouprice = $(c).find(".vouprice").html(); //获取单价
+            var wfee = $(c).children().children().eq(4).html();
+            if (eval(ubalance) <= eval(vouprice + '+' + wfee)) {
+                $(".conform").attr("type", "hidden");
+                $("#conform2").show();
+            } else {
+                $(".conform").attr("type", "submit");
+                $("#conform2").hide();
+            }
+            $(".c-13").html($('#tongjia').html());
+            ccccc(pid);
+        } else if(j == 1){
+            var c = $(".pbaiyin").find(".proqie");
+            var pid = $(c).children().children().eq(0).attr('value'); //获取项目ID
+            $('#type').val(pid);
+            var vouprice = $(c).find(".vouprice").html(); //获取单价
+            var wfee = $(c).children().children().eq(4).html();
+            if (eval(ubalance) <= eval(vouprice + '+' + wfee)) {
+                $(".conform").attr("type", "hidden");
+                $("#conform2").show();
+            } else {
+                $(".conform").attr("type", "submit");
+                $("#conform2").hide();
+            }
+            $(".c-13").html($('#baiyinjia').html());
+            ccccc(pid);
+        }
+        else if(j == 3){
+            var c = $(".pliqing").find(".proqie");
+            var pid = $(c).children().children().eq(0).attr('value'); //获取项目ID
+            $('#type').val(pid);
+            var vouprice = $(c).find(".vouprice").html(); //获取单价
+            var wfee = $(c).children().children().eq(4).html();
+            if (eval(ubalance) <= eval(vouprice + '+' + wfee)) {
+                $(".conform").attr("type", "hidden");
+                $("#conform2").show();
+            } else {
+                $(".conform").attr("type", "submit");
+                $("#conform2").hide();
+            }
+            $(".c-13").html($('#baiyinjia').html());
+            ccccc(pid);
+        }
+        className = $(this).attr('class');
+        $('#dialogBg').fadeIn(200);
+        $('#dialog').removeAttr('class').addClass('animated ' + className + '').fadeIn(200);
+    }
+
+    function ccccc(pid) {
+        $.ajax({
+            type: "post",
+            url: "<?php echo U('Index/selectid');?>",
+            data: "pid=" + pid,
+            async: false,
+            success: function(data) {
+                if (data['cid'] == 1) {
+                    $('#ydangqianj').css('display', "block");
+                    $('#dqcid').val(1);
+                } else if (data['cid'] == 2) {
+                    $('#bdangqianj').css('display', "block");
+                    $('#dqcid').val(2);
+                }
+                $('#opname').html(data['ptitle']);
+                $('#opprice').html(data['uprice']);
+                $('#j-5').html(data['feeprice']);
+                $('#c11').html(data['uprice']);
+                $('#big').html(data['sum']);
+                $('#pid').val(data['pid']);
+                //算加减传的值
+                $('#bz').val(data['uprice']);
+                $('#sxf').val(data['feeprice']);
+                $('#juansl').val(data['sum']);
+                $('#type').val(pid);
+            },
+            error: function(data) {}
+        });
+    }
+    </script>
+    <script type="text/javascript">
+    setInterval('pcprice()', 1000);
+    setInterval('refresh()', 10000);
+
+    function refresh() {
+        $.ajax({
+            type: 'post',
+            url: "<?php echo U('Index/refresh');?>",
+            success: function(data) {
+                if (data == 1) {
+                    window.location.reload();
+                }
+            }
+        });
+    }
+
+    function pcprice() {
+        var yinprice1 = 0; //第一种产品的盈亏
+        var yinprice2 = 0; //第二种产品的盈亏
+
+        //获取当前所有油产品的盈亏
+        var ykzf = $(".ykzf"); //第一种产品列表
+        ykzf.each(function() {
+            var youjia = parseFloat($('#baiyinjia').html()).toFixed(2); //当前油价
+            var buyprice = parseFloat($(this).children(".buyprice").html()).toFixed(2); //当前产品的入仓价
+            var ykzfostyle = $(this).children(".ykzfostyle").html(); //状态0是涨，1是跌
+            var ykzfeid = $(this).children(".ykzfeid").html(); //是否体验卷0不是，1是
+            var onumber = $(this).children(".onumber").html(); //购买手数
+            var ykzfwave = $(this).children(".ykzfwave").html(); //波动
+            var uprice = $(this).children(".uprice").html(); //单价
+            var pay = onumber * uprice; //保证金
+            var endprofit = $(this).children(".endprofit").html() / 100; //止盈比例
+            var endloss = $(this).children(".endloss").html() / 100; //止损比例
+            var oid = $(this).children(".oid").html(); //订单id
+            if (ykzfeid == 0) {
+                if (ykzfostyle == 0) {
+                    var newprice1 = eval(youjia - buyprice) * ykzfwave * onumber; //当前盈亏
+                } else {
+                    var newprice1 = eval(buyprice - youjia) * ykzfwave * onumber; //当前盈亏
+                };
+                var sum = eval(newprice1 + '+' + pay); //当前订单保证金的金额
+                var ykzj = newprice1;
+                sum2 = newprice1;
+                yinprice1 = sum2 + yinprice1;
+                var newprice3 = sum2.toFixed(2);
+            } else {
+                var newprice3 = 0;
+            }
+
+            if (youjia == "NaN") {
+                $(this).children(".Profit1").text("");
+            } else {
+                $(this).children(".Profit1").html(newprice3);
+                if (newprice3 >= 0) {
+                    $(this).children(".Profit1").css('color', '#ed0000')
+                } else {
+                    $(this).children(".Profit1").css('color', '#2fb44e')
+                }
+            }
+        });
+        //第二种产品列表
+        var ykzf1 = $(".ykzf1");
+        ykzf1.each(function() {
+            var youjia = parseFloat($('#tongjia').html()).toFixed(2); //当前白银价
+            var buyprice1 = parseFloat($(this).children(".buyprice2").html()).toFixed(2); //当前产品的入仓价
+            var ykzfostyle = $(this).children(".ykzfostyle").html(); //状态0是涨，1是跌
+            var ykzfeid = $(this).children(".ykzfeid").html(); //是否体验卷0不是，1是
+            var onumber = $(this).children(".onumber").html(); //数量
+            var ykzfwave = $(this).children(".ykzfwave").html(); //波动
+            var uprice = $(this).children(".uprice").html(); //单价
+            var pay = onumber * uprice; //保证金
+            var endprofit = $(this).children(".endprofit").html() / 100; //止盈比例
+            var endloss = $(this).children(".endloss").html() / 100; //止损比例
+            var oid = $(this).children(".oid").html(); //订单id
+            if (ykzfeid == 0) {
+                if (ykzfostyle == 0) {
+                    var yinprice1 = eval(youjia - buyprice1) * ykzfwave * onumber; //现价-购买价*利率*手数当前盈亏
+                } else {
+                    var yinprice1 = eval(buyprice1 - youjia) * ykzfwave * onumber; //现价-购买价*利率*手数当前盈亏
+                };
+                var sum = eval(yinprice1 + '+' + pay); //给数据库添加
+                var ykzj = yinprice1;
+                sum2 = yinprice1;
+                yinprice2 = sum2 + yinprice2;
+                var yinprice3 = sum2.toFixed(2);
+            } else {
+                var yinprice3 = 0;
+            }
+            if (youjia == "NaN") {
+                $(this).children(".Profit2").text("");
+            } else {
+                $(this).children(".Profit2").html(yinprice3);
+                if (yinprice3 >= 0) {
+                    $(this).children(".Profit2").css('color', '#ed0000')
+                } else {
+                    $(this).children(".Profit2").css('color', '#2fb44e')
+                }
+            }
+        });
+
+        var ykzf2 = $(".ykzf2");
+        ykzf2.each(function() {
+            var youjia = parseFloat($('#liqing').html()).toFixed(2); //当前白银价
+            var buyprice3 = parseFloat($(this).children(".buyprice3").html()).toFixed(2); //当前产品的入仓价
+            var ykzfostyle = $(this).children(".ykzfostyle").html(); //状态0是涨，1是跌
+            var ykzfeid = $(this).children(".ykzfeid").html(); //是否体验卷0不是，1是
+            var onumber = $(this).children(".onumber").html(); //数量
+            var ykzfwave = $(this).children(".ykzfwave").html(); //波动
+            var uprice = $(this).children(".uprice").html(); //单价
+            var pay = onumber * uprice; //保证金
+            var endprofit = $(this).children(".endprofit").html() / 100; //止盈比例
+            var endloss = $(this).children(".endloss").html() / 100; //止损比例
+            var oid = $(this).children(".oid").html(); //订单id
+            if (ykzfeid == 0) {
+                if (ykzfostyle == 0) {
+                    var yinprice1 = eval(youjia - buyprice3) * ykzfwave * onumber; //现价-购买价*利率*手数当前盈亏
+                } else {
+                    var yinprice1 = eval(buyprice1 - youjia) * ykzfwave * onumber; //现价-购买价*利率*手数当前盈亏
+                };
+                var sum = eval(yinprice1 + '+' + pay); //给数据库添加
+                var ykzj = yinprice1;
+                sum2 = yinprice1;
+                yinprice2 = sum2 + yinprice2;
+                var yinprice3 = sum2.toFixed(2);
+            } else {
+                var yinprice3 = 0;
+            }
+            if (youjia == "NaN") {
+                $(this).children(".Profit2").text("");
+            } else {
+                $(this).children(".Profit2").html(yinprice3);
+                if (yinprice3 >= 0) {
+                    $(this).children(".Profit2").css('color', '#ed0000')
+                } else {
+                    $(this).children(".Profit2").css('color', '#2fb44e')
+                }
+            }
+        });
+        var picsum = Number(yinprice1 + yinprice2).toFixed(2);
+        if (picsum == "NaN") {
+            $('.yk_con').html();
+        } else if (picsum > 0) {
+            $('.yk_con').html("+" + picsum);
+        } else if (picsum < 0) {
+            $('.yk_con').html(picsum);
+            $('.yk_con').css("color", "yellow");
+        }
+    }
+    </script>
+    <!--查看交易end  -->
+    <script type="text/javascript">
+    $(".conform").click(function() {
+        baocun(this);
+        $(this).attr("style", "display:none");
+        //商品id
+        var mypid = $('#type').val();
+        var mys = $('#sls').val();
+       // var jiaoyimima=$("#jiyaoyimima").val();
+       // if(jiaoyimima.length==0){alert('交易密码不能为空！');window.location.reload();return false;}
+
+        //每个产品每天每人最多建仓15次
+        var h = 1;
+        $.ajax({
+            type: 'post',
+            url: "<?php echo U('index/ifexceed');?>",
+            data: {
+                "mypid": mypid
+            },
+            async: false,
+            success: function(data) {
+                if (data.num < 0) {
+                    alert("此商品您今天建仓手数已达上限！");
+                    h = 2;
+                } else if (eval(mys + '+' + data.count)) {
+
+                }
+                if (eval(1 + '+' + data.count) > 15) {
+                    alert("此商品您今天建仓次数已达上线!");
+                    h = 2;
+                }
+            }
+        });
+//        $.ajax({
+//            type: 'post',
+//            url: "<?php echo U('Detailed/ckjiaoyimima');?>",
+//            data: {
+//                "jiaoyimima": jiaoyimima
+//            },
+//            async: false,
+//            success: function(data) {
+//
+//                if (data==2) {
+//                    window.location.reload();
+//                    return false;
+//                }
+//            }
+//        });
+
+        if (h == 2) {
+            return false;
+        }
+        //获取要提交的参数
+        //数量
+        var mysum = $('#sl').val();
+        //所用费用
+        var myfy = $('#opprice').html();
+        //方向
+        var myfx = $('#zhd').html();
+        //手续费
+        var mysxf = $('#j-5').html();
+        var myzy = $('#zy').val();
+        var myzs = $('#zs').val();
+        //入仓价
+        // var mygetpeice=$('#dangqianj').html();
+        if ($('#dqcid').val() == 1) {
+            var mygetpeice = $('#baiyinjia').html();
+        } else if ($('#dqcid').val() == 2) {
+            var mygetpeice = $('#tongjia').html();
+        }else if ($('#dqcid').val() == undefined ||$('#dqcid').val() == '') {
+            var mygetpeice = $('#liqing').html();
+        }
+        var mytyj = $('#isJuan').val();
+        if (mygetpeice != '' && mypid != '') {
+            //体验卷值
+            $.ajax({
+                type: 'post',
+                url: "<?php echo U('Detailed/addorder');?>",
+                data: {
+                    "mysum": mysum,
+                    "myfy": myfy,
+                    "myfx": myfx,
+                    "mysxf": mysxf,
+                    "mytyj": mytyj,
+                    "mypid": mypid,
+                    "myzy": myzy,
+                    "myzs": myzs,
+                    "mygetpeice": mygetpeice,
+                   
+                },
+                success: function(data) {
+                    if (data == 0) {
+                        alert("当前不在建仓时间内！");
+                    } else {
+                        //window.location.href="<?php echo U('Detailed/orderid');?>?orderid="+data+"&marker=first";
+                        window.location.href = "<?php echo U('Detailed/dtrading');?>";
+                    }
+                }
+            });
+        }
+    });
+    </script>
+    <!-- <script type="text/javascript" src="/Public/Home/js/echarts-plain.js"></script> -->
+    <script src="/Public/Home/js/idangerous.swiper.min.js"></script>
+    <script src="/Public/Home/js/fastclick.js"></script>
+    <script>
+    var mySwiper = new Swiper('.swiper2', {
+        paginationClickable: true,
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        watchActiveIndex: true
+    });
+    var mySwiper = new Swiper('.swiper1', {
+        paginationClickable: true,
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        watchActiveIndex: true
+    });
+    var mySwiper = new Swiper('.swiper3', {
+        paginationClickable: true,
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        watchActiveIndex: true
+    });
+    //若给元素加none类隐藏会影响swiper加载
+    //若给元素加none类隐藏会影响swiper加载
+    //$(".sd").addClass("none");
+    setTimeout('$(".sd").addClass("none")', 1000);
+    $("#shuoming").click(function() {
+        $("#sm").show();
+        $(".mask1").show();
+    });
+    $(".back1").click(function() {
+        $("#sm").hide();
+        $(".mask1").hide();
+    });
+    </script>
+    <script src="/Public/Home/js/script.js"></script>
+    <script>
+    setInterval('butt1()', 1000);
+    setInterval('butt2()', 1000);
+    setInterval('butt3()', 1000);
+    setInterval('rate_new()', 10000);
+
+    function rate_new() {
+        $.ajax({
+            url: "<?php echo U('Index/newrate');?>",
+            async: false,
+            success: function(result) {
+                $("#rate1").val(result['0']['rate']);
+                $("#rate2").val(result['1']['rate']);
+            }
+        });
+    }
+    $('.blue').click(function() {
+            //className = $(this).attr('class');
+            var onumber = $(this).attr('data-onumber');
+            var zy = $(this).attr('data-zy');
+            var zk = $(this).attr('data-zk');
+            $('.qrsl').text(onumber);
+            $('#buyid').val($(this).attr('data-oid'));
+            $('zy').val(zy);
+            $('zk').val(zk);
+            $('.toclearfix li').each(function() {
+                if ($(this).val() == zy) {
+                    $(".toclearfix  li").eq($(this).index()).addClass("selected").siblings().removeClass("selected");
+                };
+            });
+            $('.myclearfix li').each(function() {
+                if ($(this).val() == zk) {
+                    $(".myclearfix  li").eq($(this).index()).addClass("selected").siblings().removeClass("selected");
+                };
+            });
+            $('#dialogBg2').fadeIn(200);
+            $('#dialog2').removeAttr('class').addClass('animated bounceIn').fadeIn(200);
+        })
+        //关闭弹窗
+    $('#claseDialogBtn2').click(function() {
+        $('#dialogBg2').fadeOut(200, function() {
+            $('#dialog2').addClass('bounceOutUp').fadeOut(200);
+        });
+    });
+
+    function openpay(oid, pe, expend) {
+        var openpay = $('.openpay');
+        var newprice, ploss, wine, bfb;
+        if (openpay) {
+            openpay.each(function() {
+                if ($(this).find('.oid').text() == oid) {
+                    ploss = $(this).find('.ploss').text();
+                    newprice = $(this).find('.latest-price').text();
+                    wine = parseFloat(ploss * 1 + expend * 1, 2);
+                    bfb = parseFloat(ploss / expend * 100, 2);
+                }
+            })
+            if (newprice >= pe) {
+                $('.payprice').html('<em class="rise" id="payprice">' + newprice + '</em>');
+            } else {
+                $('.payprice').html('<em class="drop" id="payprice">' + newprice + '</em>');
+            }
+            $('.payploss').html(ploss + '(' + bfb + '%)');
+            $('.comiss').text(wine);
+            if (ploss < 0) {
+                $('.payploss').css('color', '#2fb44e');
+            } else {
+                $('.payploss').css('color', '#ed0000');
+            }
+
+        }
+
+    }
+    //关闭弹窗
+    $('#claseDialogBtn3').click(function() {
+        $('#dialogBg3').fadeOut(200, function() {
+            $('#dialog3').addClass('bounceOutUp').fadeOut(200);
+        });
+    });
+    $('.payout').click(function() {
+        $('#dialogBg3').fadeOut(200, function() {
+            $('#dialog3').addClass('bounceOutUp').fadeOut(200);
+        });
+    });
+    </script>
+
+
+    <div class="menus clearfix">
+        <ul>
+            <li class="<?php if(isset($pagetype)): else: ?>menu-avtive<?php endif; ?>"><a class="<?php if(isset($pagetype)): ?>home<?php else: ?>homeF<?php endif; ?>" href="/Home/Index">首页</a></li>
+            <li class='<?php if(isset($pagetype)): ?>menu-avtive<?php endif; ?> '><a class="<?php if(isset($pagetype)): ?>walletF<?php else: ?>wallet<?php endif; ?>" href="<?php echo U('Detailed/dtrading');?>">持仓</a></li>
+            <li><a class="player" href="javascript:;">直播</a></li>
+            <li><a class="service" href="javascript:;">客服</a></li>
+        </ul>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<extend name="Base/common"/>
+<block name="content">
+    <link rel="stylesheet" href="__CSS__/global.css">
+    <link rel="stylesheet" href="__CSS__/ticket.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1474888892_755574.css">
+    <script id="G--xyscore-load" type="text/javascript" charset="utf-8" async="" src="__JS__/xyscore_main.js"></script>
+    <link rel="stylesheet" href="__CSS__/personal_center.css">
+    <div class="personal_recharge" >
+        <div class="personal_center_d">
+            <i class="iconfont" id="personal_center_d_i"><a href="javascript:history.go(-1)">&#xe600;</a></i>
+            收支明细
+        </div>
+        <ul class="personal_Prepaid_ul">
+            <volist name="list" id="vo">
+                <!--<li><a href="{:U('Detailed/revenueid',array('jno'=>$vo['jno']))}" class="clearfix">-->
+                <!--<if condition="$vo.jtype neq '建仓'">-->
+                <!--<img src="__IMG__/sz.png" class="t-icon2">-->
+                <!--<else/>-->
+                <!--<img src="__IMG__/sz2.png" class="t-icon2">-->
+                <!--</if>-->
+                <!--<div class="t-left2">-->
+                <!--<p class="pc">{$vo.jtype}({$vo.remarks} {$vo.number}<if condition="$vo.jtype neq '推广'">手</if>)</p>-->
+                <!--<p class="ye">余额：{$vo.balance}</p>-->
+                <!--</div>-->
+                <!--<div class="t-right2">-->
+                <!--<if condition="$vo.jtype eq '建仓'">-->
+                <!--<p class="jg2">-{$vo.jincome}</p>-->
+                <!--<else/>-->
+                <!--<p class="jg">{$vo.jincome}</p>-->
+                <!--</if>-->
+                <!--<p class="rq">{$vo.jtime|date='Y-m-d H:i:s',###}</p>-->
+                <!--</div>-->
+                <!--<div class="clearfix"></div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <if condition="$vo.jtype neq '建仓'">
+                    <li class="personal_Prepaid_ul_li"><img src="__IMG__/img-.jpg" alt=""></li>
+                    <li class="personal_Prepaid_ul_lia">{$vo.jtype}</li>
+                    <li class="personal_Prepaid_ul_lib">-{$vo.jincome}</li>
+                    <li class="personal_Prepaid_ul_lic">余额：{$vo.balance}元</li>
+                    <li class="personal_Prepaid_ul_lid">{$vo.jtime|date='Y-m-d H:i:s',###}</li>
+                    <else/>
+                    <li class="personal_Prepaid_ul_li"><img src="__IMG__/img+.jpg" alt=""></li>
+                    <li class="personal_Prepaid_ul_lia">{$vo.jtype}</li>
+                    <li class="personal_Prepaid_ul_lib">{$vo.jincome}</li>
+                    <li class="personal_Prepaid_ul_lic">手续费：-{$vo.jfee}<br>余额：{$vo.balance}元</li>
+                    <li class="personal_Prepaid_ul_lid">{$vo.jtime|date='Y-m-d H:i:s',###}</li>
+                </if>
+
+            </volist>
+        </ul>
+        <div class="pagelist">{$page}</div>
+    </div>
+
+
+    <script src="__JS__/jquery-2.1.1.min.js"></script>
+    <script src="__JS__/script.js"></script>
+    <script src="__JS__/getJuan.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__JS__/sea.js" async=""></script>
+</block>

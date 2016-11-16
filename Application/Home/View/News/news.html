@@ -1,0 +1,38 @@
+<extend name="Base/common"/>
+<block name="content">
+
+	<link rel="stylesheet" href="__CSS__/global.css">
+	<link rel="stylesheet" href="__CSS__/index.css">
+	<link rel="stylesheet" href="__CSS__/cd.css">
+	<link rel="stylesheet" href="__CSS__/foot.css">
+	<script language="javascript" type="text/javascript" src="__JS__/jquery.min.js"></script>
+	<script id="G--xyscore-load" type="text/javascript" charset="utf-8" async="" src="__JS__/xyscore_main.js"></script>
+	<script language="javascript" type="text/javascript" src="__JS__/cd.js"></script>
+	<script language="javascript" type="text/javascript" src="__JS__/common.js"></script>
+
+	<link rel="stylesheet" href="__CSS__/personal_center.css">
+	<link rel="stylesheet" href="__CSS__/VDisk.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1474899707_3555267.css">
+
+	<div class="VDisk_affiche">
+		<div class="personal_center_d"> <i class="iconfont" id="personal_center_d_i"><a href="javascript:history.go(-1)">&#xe600;</a></i> 
+			公告
+		</div>
+		<ul class="VDisk_affiche_ul">
+			<volist name="nlist" id="vo">
+				<li class="item clearfix">
+					<a href="{:U('News/newsid')}?nid={$vo['nid']}">
+						<img class="pic" src="/Uploads/{$vo.ncover}" width="80" height="60" />
+						<div class="go"></div>
+						<div class="title">{$vo.ntitle}</div>
+						<div class="ctime">{$vo.ntime|date='Y-m-d H:i:s',###}</div>
+						<div style="display: none">
+							<?php $c=htmlspecialchars_decode($vo['ncontent']);echo $c;?></div>
+					</a>
+				</li>
+			</volist>
+		</ul>
+		<div class="map">{$page}</div>
+	</div>
+
+</block>

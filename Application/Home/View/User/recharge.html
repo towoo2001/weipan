@@ -1,0 +1,145 @@
+﻿<extend name="Base/common"/>
+<block name="content">
+<link rel="stylesheet" href="__CSS__/global.css">
+<link rel="stylesheet" href="__CSS__/charge.css">
+<script id="G--xyscore-load" type="text/javascript" charset="utf-8" async="" src="__JS__/xyscore_main.js"></script>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="index" style="background-color:#E0E0E0;">
+    <header class="list-head" style='font-size: 13px;height:4em;color: #fff;'>
+     <div class="userinfo" style="width: 207px; line-height: 3em;"> 
+        <i class="iconfont" style="float:left;color:#ECEFF1;margin-right:10px;"><a href="javascript:history.go(-1)" style="color: #fff;">&#xe600;</a></i> 
+        <div style="float: left;margin-right: 10px;">账户ID：{$suer['username']}</div>
+     	<div>余额：<span class="gold-yuan">{$result['balance']}</span></div>
+     </div>
+     <div style="float: right;">
+        <a href="/Home/User/cash.html" class="btn" style="background: #F44336;color: #fff;line-height: 1em;">提现</a>
+        <a href="/Home/User/rechargelist.html" class="btn" style="color: #fff;background: #FFC107;line-height: 1em;">充值记录</a>
+     </div>
+<!--      <button class="info-cz btn btn-danger" onclick="User.zhifu()" style="line-height: 1em;">充值</button> -->
+    </header>
+   
+	<form id="moneyCharge1" class="" method="post" action="" target="_blank">
+		<input type="hidden" id="zhenmoeny" class="c-input" maxlength="6" value="" name="money">
+	</form>
+		<div class="pay-method">充值金额</div>
+		<div class="money-num">
+			<ul class="money-list clearfix">
+				<li onclick="changemoney('20',this)" class='moneyli'>20</li>
+				<li onclick="changemoney('100',this)" class='moneyli'>100</li>
+				<li onclick="changemoney('500',this)" class='moneyli'>500</li>
+				<li onclick="changemoney('1000',this)" class='moneyli'>1000</li>
+				<li onclick="changemoney('5000',this)" class='moneyli'>5000</li>
+				<li onclick="showobj()" id="addmoney" class="money-else">其他</li>
+				<input type="text" id="nowmoney" style="display:none;width: 100%;height:3em;border:none;font-size:3em;" placeholder="请输入充值金额" onkeyup="changemoney1(this)" />
+			</ul>
+		</div>
+		
+        <div class="money-pay">
+            <div class="pay-method">充值方式</div>
+<!--             <li class="item clearfix" class="item" onclick="User.typeSetter('zhifu')">
+              <img src="/Public/Home/images/pay/UPay.png">
+              <span class="select-icon select" pay="zhifu" ></span>
+              <div class="pay-title">网银充值</div>
+              <div class="pay-version">使用银联</div>  
+            </li> -->
+            <li class="item clearfix" onclick="User.typeSetter('weixin')">
+              <img src="/Public/Home/images/pay/weixin.png" >
+              <span  class="select-icon select" pay="weixin"></span>
+              <div class="pay-title">微信充值</div>
+              <div class="pay-version">使用微信</div>
+            </li>
+            <li class="item clearfix">
+            	<button  class="btn" style="background-color: #395797;border-color: #395797;"><a href="/Home/Index" style="color: #fff;">返回</a></button>
+            	<button class="btn btn-danger" onclick="User.zhifu()">立即充值</button>
+            </li>
+        </div>
+    </form>
+	<script>
+
+	    var User = {
+	    	zhifu:function(){
+	    		var money,type;
+	    		money = $("#zhenmoeny").val();
+	    		type = this.type;
+				if(!money)
+				{
+					alert("请选择金额！");
+					return false;
+				}
+				if(money < 20)
+				{
+					alert("金额最少为20元！");
+					return false;
+				}
+				if(type == 'weixin')
+				{
+					$("#moneyCharge1").attr('action',"{:U('User/weixinpay')}");
+					$("#moneyCharge1").submit();
+				}else{
+					//$("#moneyCharge1").attr('action',"{:U('User/reapal')}");
+					$("#moneyCharge1").attr('action',"{:U('User/gopay')}");
+					$("#moneyCharge1").submit();
+				}
+	    	},
+	    	type:'weixin',
+	    	typeSetter:function(str){
+                this.type = str;
+                $(".money-pay .select").removeClass('select');
+                $(".money-pay [pay='" + str + "']").addClass('select');
+	    	}
+
+	    }
+		
+
+		function changemoney(money,ele)
+		{
+			eles = $('.moneyli');
+			for (var i = eles.length - 1; i >= 0; i--) {
+				oele = eles[i];
+				oele.style.background='white';
+				oele.style.color='black';
+			}
+			
+			ele.style.background='#395797';
+			ele.style.color = '#fff';
+			$("#nowmoney").val('');
+			$("#nowmoney").hide();
+			$("#zhenmoeny").val(money);
+		}
+		function changemoney1(obj)
+		{	if(isNaN($(obj).val()))
+			{
+				alert("只能输入正整数！");
+			}
+			$("#zhenmoeny").val($(obj).val());
+		}
+		function showobj()
+		{
+			$("#zhenmoeny").val('');
+			$("#nowmoney").show();
+		}
+	</script>
+	
+	
+	
+	
+	
+	
+	
+  </div>
+ 
+</div>
+
+<script src="__JS__/script.js"></script>
+<script type="text/javascript">
+$(function(){  
+  if ($('#order_id').val()!='') {
+       $('#moneyCharge2').submit();
+    };
+});
+</script>
+<script type="text/javascript" charset="utf-8" src="__JS__/sea.js" async=""></script>
+</block>

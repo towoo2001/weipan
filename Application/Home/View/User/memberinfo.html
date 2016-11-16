@@ -1,0 +1,88 @@
+<extend name="Base/common"/>
+<block name="content">
+	<link rel="stylesheet" href="__CSS__/global.css">
+	<link rel="stylesheet" href="__CSS__/account.css">
+
+	<script id="G--xyscore-load" type="text/javascript" charset="utf-8" async="" src="__JS__/xyscore_main.js"></script>
+	<link rel="stylesheet" href="__CSS__/personal_center.css">
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_1474888892_755574.css">
+
+	<div class="personal_center">
+		<div class="personal_center_d">
+			<i class="iconfont" id="personal_center_d_i"><a href="javascript:history.go(-1)">&#xe600;</a></i>
+			个人中心
+		</div>
+		<div class="personal_center_da">
+			<img src="{$suer.portrait}" style="width:100%;height:100%;opacity:0.6"/>
+			<p class="personal_center_da_d_p">
+				<img src="{$suer.portrait}"/>
+			<form id="form1" action="__URL__/changeimg" method="post" enctype="multipart/form-data">
+				<input type="file" name="file" onchange="changeimg()" style="cursor:pointer;opacity:0;position:relative;top:-16em;left:13em;width:6em;height:6em"/>
+			</form>
+			</p>
+
+			<ul class="personal_center_da_d_ul">
+				<li>
+					<p>{$suer.utel|changephone=###}</p>
+					<span>电话</span>
+				</li>
+				<li>
+					<p>&yen;{$result.balance}</p>
+					<span>余额</span>
+				</li>
+				<li>
+					<if condition="$user.exper neq 0" ><p>{$user.exper}张</p><else/><p>0张</p></if>
+					<span>交易卷</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="personal_center_db">
+		<div class="info-box clearfix"> 
+		    <a href="{:U('User/recharge')}">
+		        <i class="a-11"></i>
+			    <div class="info-detail clearfix"> 充值<div class="go"></div></div>
+			</a> 
+		</div>
+		<div class="info-box clearfix">
+		    <a href="{:U('User/cash')}"> 
+			    <i class="a-12"></i>
+				<div class="info-detail clearfix"> 提现<div class="go"></div></div>
+			</a> 
+		</div>
+		<!--<div class="info-box clearfix"> <i class="a-3"></i>-->
+			<!--<div class="info-detail clearfix"> <a href="{:U('Detailed/dtrading')}">交易历史</a> </div>-->
+		<!--</div>-->
+		<div class="info-box clearfix"> 
+		    <a href="{:U('Detailed/drevenue')}">
+			    <i class="a-4"></i>
+				<div class="info-detail clearfix"> 收支明细<div class="go"></div></div>
+			</a>
+		</div>
+		<div class="info-box clearfix">
+		   <a href="{:U('User/experiencelist')}">
+			    <i class="a-1"></i>
+				<div class="info-detail clearfix">交易卷<div class="go"></div></div>
+			</a> 
+		</div>
+		<!--<div class="info-box clearfix"> <i class="a-6"></i> -->
+		<!--<div class="info-detail clearfix" style="display:block"> <a href="{:U('User/recommend')}">交易卷</a></div>-->
+		<!--</div>-->
+		<div class="info-box clearfix"> 
+		    <a href="{:U('User/rechargelist')}">
+		      <i class="a-5"></i>
+			  <div class="info-detail clearfix">充值记录<div class="go"></div></div>
+			</a> 
+		</div>
+	</div>
+	<script>
+		function changeimg()
+		{
+			$("#form1").submit();
+		}
+	</script>
+	<script src="__JS__/jquery-2.1.1.min.js"></script>
+	<script src="__JS__/script.js"></script>
+	<script type="text/javascript" charset="utf-8" src="__JS__/sea.js" async=""></script>
+</block>
+

@@ -1,0 +1,2296 @@
+[ 2016-11-16T09:05:32+08:00 ] ::1 /?callback=jQuery17207471669532824308_1479258331973&_=1479258331978
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T09:05:32+08:00 ] ::1 /Home/User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined index: wxopenid E:\www\gupiao\Application\Home\Controller\UserController.class.php 第 58 行.
+SQL: SHOW COLUMNS FROM `wp_userinfo` [ RunTime:0.016001s ]
+SQL: UPDATE `wp_userinfo` SET `lastlog`=1479258332 WHERE ( username ="" ) [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:06:16+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:16+08:00 ] 127.0.0.1 /Home/User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: wxopenid E:\www\gupiao\Application\Home\Controller\UserController.class.php 第 58 行.
+SQL: SHOW COLUMNS FROM `wp_userinfo` [ RunTime:0.002000s ]
+SQL: UPDATE `wp_userinfo` SET `lastlog`=1479265576 WHERE ( username ="" ) [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.004000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:22+08:00 ] 127.0.0.1 /Home/User/login.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: wxopenid E:\www\gupiao\Application\Home\Controller\UserController.class.php 第 58 行.
+SQL: SHOW COLUMNS FROM `wp_userinfo` [ RunTime:0.003000s ]
+SQL: UPDATE `wp_userinfo` SET `lastlog`=1479265582 WHERE ( username ="admin" ) [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_userinfo` [ RunTime:0.003000s ]
+SQL: SELECT `uid`,`username`,`upwd`,`utime`,`openid`,`vertus` FROM `wp_userinfo` WHERE ( `username` = 'admin' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: wxopenid E:\www\gupiao\Application\Home\Controller\UserController.class.php 第 145 行.
+SQL: UPDATE `wp_userinfo` SET `openid`=null WHERE ( `username` = 'admin' ) AND ( `uid` = 285 ) [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:06:22+08:00 ] 127.0.0.1 /Home/Index/index.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_userinfo` [ RunTime:0.003000s ]
+SQL: SELECT * FROM `wp_userinfo` WHERE ( uid=285 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_accountinfo` [ RunTime:0.031002s ]
+SQL: SELECT * FROM `wp_accountinfo` WHERE ( uid=285 ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_experienceinfo` [ RunTime:0.011001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wp_experienceinfo` INNER JOIN wp_experience on wp_experienceinfo.exid=wp_experience.eid  WHERE ( wp_experienceinfo.uid=285 and 1479265582 < wp_experience.endtime and wp_experienceinfo.getstyle=0 ) LIMIT 1   [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_catproduct` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `wp_catproduct`  [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.004001s ]
+SQL: SELECT * FROM `wp_productinfo`  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_order` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `wp_order` INNER JOIN wp_productinfo on wp_order.pid=wp_productinfo.pid INNER JOIN wp_catproduct on wp_productinfo.cid=wp_catproduct.cid  WHERE ( wp_order.uid=285 and ostaus=0 and is_hide=0 ) ORDER BY wp_catproduct.cid asc  [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_newsinfo` [ RunTime:0.004000s ]
+SQL: SELECT * FROM `wp_newsinfo` WHERE ( ncategory=1 ) ORDER BY nid desc LIMIT 3   [ RunTime:0.001001s ]
+SQL: SELECT * FROM `wp_newsinfo` WHERE ( ncategory=2 ) ORDER BY nid desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `wp_newsinfo` WHERE ( ncategory=3 ) ORDER BY nid desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_webconfig` [ RunTime:0.007000s ]
+SQL: SELECT * FROM `wp_webconfig`  [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productlist` [ RunTime:0.002000s ]
+ERR: 1146:Table 'weipanbao.wp_productlist' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `wp_productlist`
+SQL: SELECT `zuidi_price` FROM `wp_productlist` WHERE ( pname='CAD-LME' ) ORDER BY pid DESC LIMIT 2   [ RunTime:0.000000s ]
+ERR: 1146:Table 'weipanbao.wp_productlist' doesn't exist
+ [ SQL语句 ] : SELECT `zuidi_price` FROM `wp_productlist` WHERE ( pname='CAD-LME' ) ORDER BY pid DESC LIMIT 2  
+SQL: SELECT `zuidi_price` FROM `wp_productlist` WHERE ( pname='CAD-LME' ) ORDER BY pid DESC LIMIT 2   [ RunTime:0.000000s ]
+ERR: 1146:Table 'weipanbao.wp_productlist' doesn't exist
+ [ SQL语句 ] : SELECT `zuidi_price` FROM `wp_productlist` WHERE ( pname='CAD-LME' ) ORDER BY pid DESC LIMIT 2  
+SQL: SELECT `zuidi_price` FROM `wp_productlist` WHERE ( pname='CAD-LME' ) ORDER BY pid DESC LIMIT 2   [ RunTime:0.001000s ]
+ERR: 1146:Table 'weipanbao.wp_productlist' doesn't exist
+ [ SQL语句 ] : SELECT `zuidi_price` FROM `wp_productlist` WHERE ( pname='CAD-LME' ) ORDER BY pid DESC LIMIT 2  
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplace [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplate [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCache [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:06:23+08:00 ] 127.0.0.1 /Home/Detailed/GetChartData?callback=jQuery18309496769291239218_1479265582954&type=area&code=CAD-LME&rows=45&interval=1&_=1479265582968
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product` [ RunTime:0.002001s ]
+SQL: SELECT * FROM `wp_product` WHERE ( `Code` = 'CAD-LME' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product_chart` [ RunTime:0.002000s ]
+SQL: SELECT `Open`,`Close`,`High`,`Low`,`AddTime`,`QuoteTime` FROM `wp_product_chart` WHERE ( `ItemId` = 195 ) AND ( `IntervalId` = 1 ) ORDER BY AddTime desc LIMIT 45   [ RunTime:0.136008s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-16T11:06:33+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.027002s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.008000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-11-16T11:06:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.004000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:06:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:43+08:00 ] 127.0.0.1 /Home/Detailed/GetChartData?callback=jQuery183024187236983937632_1479265603773&type=candlestick&code=CAD-LME&rows=45&interval=5&_=1479265603794
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product` [ RunTime:0.002000s ]
+SQL: SELECT * FROM `wp_product` WHERE ( `Code` = 'CAD-LME' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_product_chart` [ RunTime:0.002000s ]
+SQL: SELECT `Open`,`Close`,`High`,`Low`,`AddTime`,`QuoteTime` FROM `wp_product_chart` WHERE ( `ItemId` = 195 ) AND ( `IntervalId` = 2 ) ORDER BY AddTime desc LIMIT 45   [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:44+08:00 ] 127.0.0.1 /Home/Detailed/GetChartData?callback=jQuery1830785889688271489_1479265604315&type=candlestick&code=CAD-LME&rows=45&interval=30&_=1479265604334
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `wp_product` WHERE ( `Code` = 'CAD-LME' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_product_chart` [ RunTime:0.002000s ]
+SQL: SELECT `Open`,`Close`,`High`,`Low`,`AddTime`,`QuoteTime` FROM `wp_product_chart` WHERE ( `ItemId` = 195 ) AND ( `IntervalId` = 4 ) ORDER BY AddTime desc LIMIT 45   [ RunTime:0.011001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:44+08:00 ] 127.0.0.1 /Home/Detailed/GetChartData?callback=jQuery183018441538882200526_1479265604746&type=candlestick&code=CAD-LME&rows=45&interval=1h&_=1479265604768
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `wp_product` WHERE ( `Code` = 'CAD-LME' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_product_chart` [ RunTime:0.001000s ]
+SQL: SELECT `Open`,`Close`,`High`,`Low`,`AddTime`,`QuoteTime` FROM `wp_product_chart` WHERE ( `ItemId` = 195 ) AND ( `IntervalId` = 5 ) ORDER BY AddTime desc LIMIT 45   [ RunTime:0.009001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:45+08:00 ] 127.0.0.1 /Home/Detailed/GetChartData?callback=jQuery18306335403963182533_1479265605212&type=candlestick&code=CAD-LME&rows=45&interval=1d&_=1479265605225
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product` [ RunTime:0.001000s ]
+SQL: SELECT * FROM `wp_product` WHERE ( `Code` = 'CAD-LME' ) LIMIT 1   [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_product_chart` [ RunTime:0.001000s ]
+SQL: SELECT `Open`,`Close`,`High`,`Low`,`AddTime`,`QuoteTime` FROM `wp_product_chart` WHERE ( `ItemId` = 195 ) AND ( `IntervalId` = 6 ) ORDER BY AddTime desc LIMIT 45   [ RunTime:0.008001s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\www\gupiao\Application\Home\Controller\DetailedController.class.php 第 930 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:53+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:06:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:07:03+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:07:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:07:13+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:07:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:07:23+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:07:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:07:33+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:07:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:07:43+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:07:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:07:53+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:07:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:03+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:08:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:13+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:23+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:33+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:08:43+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:08:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:08:53+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:08:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:03+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:09:13+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:09:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:09:23+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:09:33+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:09:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:43+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:09:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:10:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:10:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:10:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:10:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:10:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:10:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:10:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:10:32+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:10:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:10:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.001000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:10:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.001000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:10:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.001000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:02+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:11:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:11:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:11:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:11:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:11:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:11:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:12:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:12:02+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:12:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:12:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:12:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:12:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:12:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:12:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:12:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:12:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:12:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:12:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:13:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:13:02+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:13:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:13:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:13:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:13:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:13:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:13:32+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:13:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:13:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:13:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:13:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:02+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:14:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:12+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:14:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:14:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:32+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:14:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:15:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:12+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:15:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:15:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:15:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:16:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:16:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:16:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:16:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:16:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:17:02+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:17:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:17:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:17:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:17:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:17:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:18:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:18:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:18:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:18:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:18:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:18:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:19:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:19:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:19:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:19:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:19:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:19:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:19:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:19:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:19:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:19:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:19:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:19:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:12+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:20:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:20:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:20:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:20:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:20:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:21:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:21:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:21:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:21:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:21:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:21:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:21:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:21:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:21:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:21:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:21:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:21:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:22:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:22:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:22:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:22:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:32+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:22:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:22:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:23:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:23:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:23:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:23:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:23:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:23:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:23:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:23:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:23:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:23:42+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:23:52+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:23:52+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002001s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:24:02+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:12+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:22+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:22+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:24:32+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:42+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:24:53+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:24:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:25:03+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:13+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:23+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:25:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:25:33+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:25:43+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:25:53+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:25:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:26:03+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:26:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:26:13+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:26:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:26:23+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:26:23+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:26:33+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:26:33+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:26:43+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:26:43+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:26:53+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.003000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:26:53+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.003000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
+[ 2016-11-16T11:27:03+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002001s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-11-16T11:27:03+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.001000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:27:13+08:00 ] 127.0.0.1 /Home/Index/refresh.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_journal` [ RunTime:0.002000s ]
+SQL: SELECT `jtime` FROM `wp_journal` WHERE ( jtype='爆仓' ) ORDER BY jtime desc LIMIT 1   [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTrace [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2016-11-16T11:27:13+08:00 ] 127.0.0.1 /Home/Index/newrate.html
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCache [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `wp_productinfo` [ RunTime:0.002000s ]
+SQL: SELECT `rate` FROM `wp_productinfo` GROUP BY cid  [ RunTime:0.000000s ]
+
