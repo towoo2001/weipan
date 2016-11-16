@@ -54,4 +54,48 @@
 		}
 		return $arruid;
 	}
+
+	/**
+     * $name   string 表单上传name
+     * $pre    string 图片前缀
+     * $thumbX int    缩略图宽
+     * $thumbY int    所路途高
+	 * */
+    function picUpload($name,$pre,$thumbX,$thumbY){
+        if($_FILES[$name]["name"]){
+            $conf = C('UPLOAD');
+            $upload = new \Think\Upload();// 实例化上传类
+            $upload->maxSize   =     $conf['maxSize'] ;// 设置附件上传大小
+            $upload->exts      =     $conf['exts'];// 设置附件上传类型
+            $upload->rootPath  =     $conf['rootPath']; // 设置附件上传根目彿
+            $upload->saveName  =     strtoupper($pre).rand(0, 10000).time();
+            // 上传文件
+            $info = $upload->upload();
+            if($info){
+                //定义一个空数组，用来保存原图的地址，以及缩略图的地址
+                $pathinfo = array();
+                $img_name = $info[$name]["savename"];
+                $save_path = $info[$name]["savepath"];
+                //保存文件路径
+                $url = $upload->rootPath . $info[$name]["savepath"] . $info[$name]["savename"];
+                $image = new \Think\Image(); //实例化缩略图类
+                $info = $image->open($url);//打开缩略图
+                $width = $image->width(); // 返回图片的宽度
+                $height = $image->height(); // 返回图片的高度
+                //设置缩略图保存的路径
+                $thumburl = $conf['thumbPath'].$save_path;
+                //设置文件名称
+                $thumbname = 'thumb_'.$img_name;
+                //根据图片的宽高来剪裁图片，生成缩略图并保存
+                $image->thumb($thumbX, $thumbY,\Think\Image::IMAGE_THUMB_CENTER)->save($thumburl.$thumbname);
+                //将图片信息保存到数组中
+                $pathinfo['pic_url'] = $save_path . $img_name;
+                $pathinfo['thumb']= $save_path . $thumbname;
+
+            }else{
+                return $upload->getError();
+            }
+            return $pathinfo;
+        }
+    }
 ?>

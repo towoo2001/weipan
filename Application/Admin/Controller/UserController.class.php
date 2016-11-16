@@ -164,7 +164,6 @@ class UserController extends Controller {
 		}
 		$this->assign('page',$show);
 		$this->assign('ulist',$ulist);
-    	
 
 		//统计
 		//用户数量

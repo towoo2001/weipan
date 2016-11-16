@@ -71,22 +71,13 @@ class NewsController extends Controller {
 		if(IS_POST){
 			$news = D('newsinfo');
 			header("Content-type: text/html; charset=utf-8");
-            $upload = new \Think\Upload();// 实例化上传类
-            $upload->maxSize   =     3145728 ;// 设置附件上传大小
-            $upload->exts      =     array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-            $upload->rootPath  =     'Public/Uploads'; // 设置附件上传根目录
-            $info   =   $upload->upload();
+            $info = picUpload('input-file','news',100,100);
             if(!$info) {// 上传错误提示错误信息    
-                $this->error($upload->getError());
-            }else{
-            	// 上传成功 获取上传文件信息   
-              	foreach($info as $file){      
-                	$idcover= $file['savepath'].$file['savename'];    
-           		}
-			}
+                $this->error($info);
+            }
 			if($news->create()){
 				$news->ntime = strtotime(I('post.ntime'));
-				$news->ncover = $idcover;
+				$news->ncover = $info['pic_url'];
 				
 				$result = $news->add();
 				if($result){

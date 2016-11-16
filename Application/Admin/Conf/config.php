@@ -12,8 +12,13 @@ return array(
         '__CSS__'    => __ROOT__ . '/Public/' . MODULE_NAME . '/css',
         '__JS__'     => __ROOT__ . '/Public/' . MODULE_NAME . '/js',
         
-    )
-	
+    ),
+	'UPLOAD' => array(
+	    'maxSize'   => 3145728,                                // 设置附件上传大小
+        'exts'      => array('jpg', 'gif', 'png', 'jpeg'),    // 设置附件上传类型
+        'rootPath'  => './Uploads/',                    // 设置附件上传根目路
+        'thumbPath' => './Uploads/',                    //设置缩略图保存的路径
+    ),
 
 	
  

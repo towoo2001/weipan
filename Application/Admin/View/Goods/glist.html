@@ -7,9 +7,8 @@
         <div id="pad-wrapper" class="users-list">
             <div class="row-fluid header">
                 <h3>产品管理&nbsp;>&nbsp;产品列表</h3>
-                <div class="span8 pull-right">
+                <div class="span8 pull-right" style="padding-top:20px;">
                     <input type="text" class="span6 search" placeholder="请输入商品名称查找..." id="top_search"/>
-                    
                     <!-- custom popup filter -->
                     <!-- styles are located in css/elements.css -->
                     <!-- script that enables this dropdown is located in js/theme.js -->
@@ -143,8 +142,8 @@
                         	{$gl['patj']}
                         </td> -->
                         <td>
-							<ul class="actions">
-								<li style="border: 0;"><a href="{:U('Goods/gedit',array('pid'=>$gl['pid']))}"><i class="table-edit"></i></a></li>
+							<ul class="actions" style="width:90px;">
+								<li style="border: 0;width:90px;"><a href="{:U('Goods/gedit',array('pid'=>$gl['pid']))}">修改</a> | <a href="{:U('Goods/gadd')}">添加</a></li>
 								<!--<li class="last"><a href="{:U('Goods/gdel',array('pid'=>$gl['pid']))}" onclick="if(confirm('确定要删除吗?')){return true;}else{return false;}"><i class="table-delete"></i></a></li>-->
 							</ul>
                         </td>

@@ -5,12 +5,12 @@
     <div class="container-fluid">
         <div id="pad-wrapper" class="form-page">
 			 <div class="row-fluid header">
-                <h3>产品管理&nbsp;>&nbsp;添加产品</h3>
+                <h3>产品管理&nbsp;>&nbsp;修改产品</h3>
             </div>
             <div class="row-fluid form-wrapper">
             	<form action="{:U('Goods/gedit')}" method="post">
                 <!-- left column -->
-                <div class="span8 column">
+                <div class="span8 column" style="padding-top:20px;">
                 	<input type="hidden" name="pid" value="{$editgood['pid']}"/>
 					<div class="field-box" style="width: 45%;">
 						<label>商品名称：</label>
